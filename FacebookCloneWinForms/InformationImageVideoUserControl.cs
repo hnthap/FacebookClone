@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace FacebookCloneWinForms
 {
-    public partial class UserReelForm : Form
+    public partial class InformationImageVideoUserControl : UserControl
     {
-        public UserReelForm()
+        public InformationImageVideoUserControl()
         {
             InitializeComponent();
-            InformationImageVideoUserControl reel = new InformationImageVideoUserControl();
-            ReelContentPanel.Controls.Add(reel);
-        }
-
-        private void VideoContentPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

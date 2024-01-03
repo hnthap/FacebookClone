@@ -15,9 +15,16 @@ namespace FacebookCloneWinForms
         public UserFriendForm()
         {
             InitializeComponent();
+            InformationFriendUserControl friend = new InformationFriendUserControl();
+            FriendContentPanel.Controls.Add(friend);
         }
 
         private void UserFriendForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FriendContentPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -28,24 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            VideoContentPanel = new Panel();
+            VideoLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // VideoContentPanel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(245, 187);
-            label1.Name = "label1";
-            label1.Size = new Size(86, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Video Form";
+            VideoContentPanel.AutoScroll = true;
+            VideoContentPanel.Dock = DockStyle.Bottom;
+            VideoContentPanel.Location = new Point(0, 55);
+            VideoContentPanel.Name = "VideoContentPanel";
+            VideoContentPanel.Size = new Size(1352, 398);
+            VideoContentPanel.TabIndex = 3;
+            VideoContentPanel.Paint += VideoContentPanel_Paint;
+            // 
+            // VideoLabel
+            // 
+            VideoLabel.AutoSize = true;
+            VideoLabel.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            VideoLabel.ForeColor = SystemColors.Control;
+            VideoLabel.Location = new Point(12, 4);
+            VideoLabel.Name = "VideoLabel";
+            VideoLabel.Size = new Size(123, 43);
+            VideoLabel.TabIndex = 2;
+            VideoLabel.Text = "Videos";
+            VideoLabel.Click += VideoLabel_Click;
             // 
             // UserVideoForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(39, 39, 39);
             ClientSize = new Size(1352, 453);
-            Controls.Add(label1);
+            Controls.Add(VideoContentPanel);
+            Controls.Add(VideoLabel);
             Name = "UserVideoForm";
             Text = "UserVideoForm";
             ResumeLayout(false);
@@ -54,6 +70,7 @@
 
         #endregion
 
-        private Label label1;
+        private Panel VideoContentPanel;
+        private Label VideoLabel;
     }
 }

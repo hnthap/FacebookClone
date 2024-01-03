@@ -28,24 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            FriendContentPanel = new Panel();
+            FriendLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // FriendContentPanel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(163, 180);
-            label1.Name = "label1";
-            label1.Size = new Size(88, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Friend Form";
+            FriendContentPanel.AutoScroll = true;
+            FriendContentPanel.Dock = DockStyle.Bottom;
+            FriendContentPanel.Location = new Point(0, 52);
+            FriendContentPanel.Name = "FriendContentPanel";
+            FriendContentPanel.Size = new Size(1331, 407);
+            FriendContentPanel.TabIndex = 0;
+            FriendContentPanel.Paint += FriendContentPanel_Paint;
+            // 
+            // FriendLabel
+            // 
+            FriendLabel.AutoSize = true;
+            FriendLabel.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            FriendLabel.ForeColor = SystemColors.Control;
+            FriendLabel.Location = new Point(12, 9);
+            FriendLabel.Name = "FriendLabel";
+            FriendLabel.Size = new Size(124, 43);
+            FriendLabel.TabIndex = 1;
+            FriendLabel.Text = "Friend";
             // 
             // UserFriendForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            BackColor = Color.FromArgb(39, 39, 39);
             ClientSize = new Size(1352, 453);
-            Controls.Add(label1);
+            Controls.Add(FriendLabel);
+            Controls.Add(FriendContentPanel);
             Name = "UserFriendForm";
             Text = "UserFriendForm";
             Load += UserFriendForm_Load;
@@ -55,6 +71,7 @@
 
         #endregion
 
-        private Label label1;
+        private Panel FriendContentPanel;
+        private Label FriendLabel;
     }
 }

@@ -213,6 +213,26 @@ namespace FacebookCloneWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap like_clicked__icon {
+            get {
+                object obj = ResourceManager.GetObject("like_clicked__icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap like_count_icon {
+            get {
+                object obj = ResourceManager.GetObject("like_count_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap like_icon {
             get {
                 object obj = ResourceManager.GetObject("like_icon", resourceCulture);
