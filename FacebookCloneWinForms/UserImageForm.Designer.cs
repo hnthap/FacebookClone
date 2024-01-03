@@ -28,24 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            ImageLabel = new Label();
+            ImageContentPanel = new Panel();
             SuspendLayout();
             // 
-            // label1
+            // ImageLabel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(155, 125);
-            label1.Name = "label1";
-            label1.Size = new Size(85, 20);
-            label1.TabIndex = 0;
-            label1.Text = "ImageForm";
+            ImageLabel.AutoSize = true;
+            ImageLabel.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            ImageLabel.ForeColor = SystemColors.Control;
+            ImageLabel.Location = new Point(12, 9);
+            ImageLabel.Name = "ImageLabel";
+            ImageLabel.Size = new Size(127, 43);
+            ImageLabel.TabIndex = 0;
+            ImageLabel.Text = "Images";
+            // 
+            // ImageContentPanel
+            // 
+            ImageContentPanel.AutoScroll = true;
+            ImageContentPanel.Dock = DockStyle.Bottom;
+            ImageContentPanel.Location = new Point(0, 55);
+            ImageContentPanel.Name = "ImageContentPanel";
+            ImageContentPanel.Size = new Size(1352, 398);
+            ImageContentPanel.TabIndex = 1;
+            ImageContentPanel.Paint += ImageContentPanel_Paint;
             // 
             // UserImageForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
+            BackColor = Color.FromArgb(39, 39, 39);
             ClientSize = new Size(1352, 453);
-            Controls.Add(label1);
+            Controls.Add(ImageContentPanel);
+            Controls.Add(ImageLabel);
             Name = "UserImageForm";
             Text = "UserImageForm";
             Load += UserImageForm_Load;
@@ -55,6 +71,7 @@
 
         #endregion
 
-        private Label label1;
+        private Label ImageLabel;
+        private Panel ImageContentPanel;
     }
 }

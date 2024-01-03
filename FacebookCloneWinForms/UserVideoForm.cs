@@ -15,6 +15,18 @@ namespace FacebookCloneWinForms
         public UserVideoForm()
         {
             InitializeComponent();
+            InformationImageVideoUserControl vid = new InformationImageVideoUserControl();
+            VideoContentPanel.Controls.Add(vid);
+        }
+
+        private void VideoContentPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void VideoLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

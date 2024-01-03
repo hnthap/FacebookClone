@@ -14,10 +14,17 @@ namespace FacebookCloneWinForms
     {
         public UserImageForm()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            InformationImageVideoUserControl img = new InformationImageVideoUserControl();
+            ImageContentPanel.Controls.Add(img);
         }
 
         private void UserImageForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ImageContentPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }

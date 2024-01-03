@@ -28,24 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            ReelContentPanel = new Panel();
+            ReelLabel = new Label();
             SuspendLayout();
             // 
-            // label1
+            // ReelContentPanel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(190, 181);
-            label1.Name = "label1";
-            label1.Size = new Size(76, 20);
-            label1.TabIndex = 0;
-            label1.Text = "Reel Form";
+            ReelContentPanel.AutoScroll = true;
+            ReelContentPanel.Dock = DockStyle.Bottom;
+            ReelContentPanel.Location = new Point(0, 55);
+            ReelContentPanel.Name = "ReelContentPanel";
+            ReelContentPanel.Size = new Size(1352, 398);
+            ReelContentPanel.TabIndex = 5;
+            ReelContentPanel.Paint += VideoContentPanel_Paint;
+            // 
+            // ReelLabel
+            // 
+            ReelLabel.AutoSize = true;
+            ReelLabel.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            ReelLabel.ForeColor = SystemColors.Control;
+            ReelLabel.Location = new Point(12, 9);
+            ReelLabel.Name = "ReelLabel";
+            ReelLabel.Size = new Size(105, 43);
+            ReelLabel.TabIndex = 4;
+            ReelLabel.Text = "Reels";
             // 
             // UserReelForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(39, 39, 39);
             ClientSize = new Size(1352, 453);
-            Controls.Add(label1);
+            Controls.Add(ReelContentPanel);
+            Controls.Add(ReelLabel);
             Name = "UserReelForm";
             Text = "UserReelForm";
             ResumeLayout(false);
@@ -54,6 +69,7 @@
 
         #endregion
 
-        private Label label1;
+        private Panel ReelContentPanel;
+        private Label ReelLabel;
     }
 }
