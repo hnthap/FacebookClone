@@ -88,6 +88,24 @@
             GroupSelectedLabel = new Label();
             FriendSelectedLabel = new Label();
             YourContactLabel = new Label();
+            PopUpMenuPanel = new Panel();
+            panel4 = new Panel();
+            SettingLabel = new Label();
+            panel3 = new Panel();
+            LogOutLabel = new Label();
+            panel2 = new Panel();
+            ExitLabel = new Label();
+            label11 = new Label();
+            label12 = new Label();
+            label9 = new Label();
+            label10 = new Label();
+            label8 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            UserNamePopUpMenuLabel = new Label();
+            AvatarPopUpMenu = new Panel();
+            UserNamePopUpMenuClick = new Label();
+            label5 = new Label();
             YourShortcutPanel.SuspendLayout();
             MenuPanel.SuspendLayout();
             InformationPanel.SuspendLayout();
@@ -110,6 +128,11 @@
             FriendUpperPanel.SuspendLayout();
             PageUpperPanel.SuspendLayout();
             GroupUpperPanel.SuspendLayout();
+            PopUpMenuPanel.SuspendLayout();
+            panel4.SuspendLayout();
+            panel3.SuspendLayout();
+            panel2.SuspendLayout();
+            AvatarPopUpMenu.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -498,6 +521,7 @@
             UserLabelIcon.Name = "UserLabelIcon";
             UserLabelIcon.Size = new Size(60, 60);
             UserLabelIcon.TabIndex = 0;
+            UserLabelIcon.Click += UserLabelIcon_Click;
             // 
             // NotificationPanel
             // 
@@ -691,12 +715,203 @@
             YourContactLabel.TabIndex = 0;
             YourContactLabel.Text = "Your contacts";
             // 
+            // PopUpMenuPanel
+            // 
+            PopUpMenuPanel.Controls.Add(panel4);
+            PopUpMenuPanel.Controls.Add(panel3);
+            PopUpMenuPanel.Controls.Add(panel2);
+            PopUpMenuPanel.Controls.Add(label11);
+            PopUpMenuPanel.Controls.Add(label12);
+            PopUpMenuPanel.Controls.Add(label9);
+            PopUpMenuPanel.Controls.Add(label10);
+            PopUpMenuPanel.Controls.Add(label8);
+            PopUpMenuPanel.Controls.Add(label6);
+            PopUpMenuPanel.Controls.Add(label7);
+            PopUpMenuPanel.Controls.Add(UserNamePopUpMenuLabel);
+            PopUpMenuPanel.Controls.Add(AvatarPopUpMenu);
+            PopUpMenuPanel.Controls.Add(label5);
+            PopUpMenuPanel.Location = new Point(1427, 76);
+            PopUpMenuPanel.Name = "PopUpMenuPanel";
+            PopUpMenuPanel.Size = new Size(472, 323);
+            PopUpMenuPanel.TabIndex = 14;
+            PopUpMenuPanel.Visible = false;
+            // 
+            // panel4
+            // 
+            panel4.BackColor = Color.FromArgb(39, 39, 39);
+            panel4.BackgroundImage = Properties.Resources.setting_icon;
+            panel4.BackgroundImageLayout = ImageLayout.Stretch;
+            panel4.Controls.Add(SettingLabel);
+            panel4.Location = new Point(18, 92);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(60, 60);
+            panel4.TabIndex = 25;
+            // 
+            // SettingLabel
+            // 
+            SettingLabel.BackColor = Color.Transparent;
+            SettingLabel.Location = new Point(-13, 0);
+            SettingLabel.Name = "SettingLabel";
+            SettingLabel.Size = new Size(464, 67);
+            SettingLabel.TabIndex = 0;
+            SettingLabel.Click += SettingLabel_Click;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(39, 39, 39);
+            panel3.BackgroundImage = Properties.Resources.log_out_icon;
+            panel3.BackgroundImageLayout = ImageLayout.Stretch;
+            panel3.Controls.Add(LogOutLabel);
+            panel3.Location = new Point(18, 168);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(60, 60);
+            panel3.TabIndex = 24;
+            // 
+            // LogOutLabel
+            // 
+            LogOutLabel.BackColor = Color.Transparent;
+            LogOutLabel.Location = new Point(-13, 0);
+            LogOutLabel.Name = "LogOutLabel";
+            LogOutLabel.Size = new Size(464, 67);
+            LogOutLabel.TabIndex = 0;
+            LogOutLabel.Click += LogOutLabel_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.FromArgb(39, 39, 39);
+            panel2.BackgroundImage = Properties.Resources.exit;
+            panel2.BackgroundImageLayout = ImageLayout.Stretch;
+            panel2.Controls.Add(ExitLabel);
+            panel2.Location = new Point(18, 244);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(60, 60);
+            panel2.TabIndex = 23;
+            // 
+            // ExitLabel
+            // 
+            ExitLabel.BackColor = Color.Transparent;
+            ExitLabel.Location = new Point(-13, 0);
+            ExitLabel.Name = "ExitLabel";
+            ExitLabel.Size = new Size(464, 67);
+            ExitLabel.TabIndex = 0;
+            ExitLabel.Click += ExitLabel_Click;
+            // 
+            // label11
+            // 
+            label11.BackColor = Color.FromArgb(39, 39, 39);
+            label11.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = SystemColors.Control;
+            label11.Location = new Point(84, 244);
+            label11.Name = "label11";
+            label11.Size = new Size(379, 60);
+            label11.TabIndex = 22;
+            label11.Text = "Exit";
+            label11.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label12
+            // 
+            label12.BackColor = Color.FromArgb(39, 39, 39);
+            label12.Location = new Point(5, 244);
+            label12.Name = "label12";
+            label12.Size = new Size(464, 67);
+            label12.TabIndex = 21;
+            // 
+            // label9
+            // 
+            label9.BackColor = Color.FromArgb(39, 39, 39);
+            label9.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = SystemColors.Control;
+            label9.Location = new Point(84, 168);
+            label9.Name = "label9";
+            label9.Size = new Size(379, 60);
+            label9.TabIndex = 20;
+            label9.Text = "Log out";
+            label9.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label10
+            // 
+            label10.BackColor = Color.FromArgb(39, 39, 39);
+            label10.Location = new Point(5, 168);
+            label10.Name = "label10";
+            label10.Size = new Size(464, 67);
+            label10.TabIndex = 19;
+            // 
+            // label8
+            // 
+            label8.BorderStyle = BorderStyle.Fixed3D;
+            label8.Location = new Point(5, 79);
+            label8.Name = "label8";
+            label8.Size = new Size(467, 1);
+            label8.TabIndex = 18;
+            // 
+            // label6
+            // 
+            label6.BackColor = Color.FromArgb(39, 39, 39);
+            label6.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = SystemColors.Control;
+            label6.Location = new Point(84, 92);
+            label6.Name = "label6";
+            label6.Size = new Size(379, 60);
+            label6.TabIndex = 17;
+            label6.Text = "Settings";
+            label6.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            label7.BackColor = Color.FromArgb(39, 39, 39);
+            label7.Location = new Point(5, 92);
+            label7.Name = "label7";
+            label7.Size = new Size(464, 67);
+            label7.TabIndex = 16;
+            // 
+            // UserNamePopUpMenuLabel
+            // 
+            UserNamePopUpMenuLabel.BackColor = Color.FromArgb(39, 39, 39);
+            UserNamePopUpMenuLabel.Font = new Font("Trebuchet MS", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point);
+            UserNamePopUpMenuLabel.ForeColor = SystemColors.Control;
+            UserNamePopUpMenuLabel.Location = new Point(84, 3);
+            UserNamePopUpMenuLabel.Name = "UserNamePopUpMenuLabel";
+            UserNamePopUpMenuLabel.Size = new Size(379, 60);
+            UserNamePopUpMenuLabel.TabIndex = 15;
+            UserNamePopUpMenuLabel.Text = "UserNameHere";
+            UserNamePopUpMenuLabel.TextAlign = ContentAlignment.MiddleLeft;
+            UserNamePopUpMenuLabel.Click += UserNamePopUpMenuLabel_Click;
+            // 
+            // AvatarPopUpMenu
+            // 
+            AvatarPopUpMenu.BackColor = Color.FromArgb(39, 39, 39);
+            AvatarPopUpMenu.BackgroundImage = Properties.Resources.default_avatar;
+            AvatarPopUpMenu.BackgroundImageLayout = ImageLayout.Stretch;
+            AvatarPopUpMenu.Controls.Add(UserNamePopUpMenuClick);
+            AvatarPopUpMenu.Location = new Point(18, 3);
+            AvatarPopUpMenu.Name = "AvatarPopUpMenu";
+            AvatarPopUpMenu.Size = new Size(60, 60);
+            AvatarPopUpMenu.TabIndex = 1;
+            // 
+            // UserNamePopUpMenuClick
+            // 
+            UserNamePopUpMenuClick.BackColor = Color.Transparent;
+            UserNamePopUpMenuClick.Location = new Point(-13, 0);
+            UserNamePopUpMenuClick.Name = "UserNamePopUpMenuClick";
+            UserNamePopUpMenuClick.Size = new Size(464, 67);
+            UserNamePopUpMenuClick.TabIndex = 0;
+            UserNamePopUpMenuClick.Click += UserNamePopUpMenuClick_Click;
+            // 
+            // label5
+            // 
+            label5.BackColor = Color.FromArgb(39, 39, 39);
+            label5.Location = new Point(5, 3);
+            label5.Name = "label5";
+            label5.Size = new Size(464, 67);
+            label5.TabIndex = 0;
+            // 
             // HomePage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(27, 27, 27);
             ClientSize = new Size(1902, 1033);
+            Controls.Add(PopUpMenuPanel);
             Controls.Add(YourContactLabel);
             Controls.Add(FriendSelectedLabel);
             Controls.Add(Postpanel);
@@ -739,6 +954,11 @@
             FriendUpperPanel.ResumeLayout(false);
             PageUpperPanel.ResumeLayout(false);
             GroupUpperPanel.ResumeLayout(false);
+            PopUpMenuPanel.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel3.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            AvatarPopUpMenu.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -805,5 +1025,23 @@
         private Label MessengerLabelIcon;
         private Label _9_dotsLabelIcon;
         private Label YourContactLabel;
+        private Panel PopUpMenuPanel;
+        private Label UserNamePopUpMenuLabel;
+        private Panel AvatarPopUpMenu;
+        private Label label5;
+        private Label UserNamePopUpMenuClick;
+        private Panel panel2;
+        private Label ExitLabel;
+        private Label label11;
+        private Label label12;
+        private Label label9;
+        private Label label10;
+        private Label label8;
+        private Label label6;
+        private Label label7;
+        private Panel panel4;
+        private Label SettingLabel;
+        private Panel panel3;
+        private Label LogOutLabel;
     }
 }

@@ -83,6 +83,16 @@ namespace FacebookCloneWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap all_friend_icon {
+            get {
+                object obj = ResourceManager.GetObject("all_friend_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap comment_icon {
             get {
                 object obj = ResourceManager.GetObject("comment_icon", resourceCulture);
@@ -253,6 +263,16 @@ namespace FacebookCloneWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap log_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("log_out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mail_icon {
             get {
                 object obj = ResourceManager.GetObject("mail_icon", resourceCulture);
@@ -326,6 +346,16 @@ namespace FacebookCloneWinForms.Properties {
         internal static System.Drawing.Bitmap saved_icon {
             get {
                 object obj = ResourceManager.GetObject("saved_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap setting_icon {
+            get {
+                object obj = ResourceManager.GetObject("setting_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
