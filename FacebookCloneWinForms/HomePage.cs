@@ -12,6 +12,7 @@ namespace FacebookCloneWinForms
 {
     public partial class HomePage : Form
     {
+        public static bool PopUpClicked = false;
         public HomePage()
         {
             InitializeComponent();
@@ -146,6 +147,55 @@ namespace FacebookCloneWinForms
             frm.FormClosing += delegate { this.Show(); };
             frm.Show();
             this.Hide();
+        }
+
+        private void UserNamePopUpMenuLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserNamePopUpMenuClick_Click(object sender, EventArgs e)
+        {
+            var frm = new UserPage();
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
+
+        private void SettingLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LogOutLabel_Click(object sender, EventArgs e)
+        {
+            var frm = new LoginForm_();
+            frm.Location = this.Location;
+            frm.StartPosition = FormStartPosition.Manual;
+            frm.FormClosing += delegate { this.Show(); };
+            frm.Show();
+            this.Hide();
+        }
+
+        private void ExitLabel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void UserLabelIcon_Click(object sender, EventArgs e)
+        {
+            if(PopUpClicked == false)
+            {
+                PopUpMenuPanel.Visible = true;
+                PopUpClicked = true;
+            }
+            else
+            {
+                PopUpMenuPanel.Visible = false;
+                PopUpClicked = false;
+            }
         }
     }
 }
