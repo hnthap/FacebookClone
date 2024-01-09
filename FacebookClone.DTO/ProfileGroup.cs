@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FacebookClone.DTO
 {
-	public record class Group (
+	public record class ProfileGroup (
 		long GroupId,
 		string Name,
 		long MemberCount,

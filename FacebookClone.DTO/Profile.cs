@@ -13,7 +13,7 @@ namespace FacebookClone.DTO
 		string Password,
 		string Email,
 		DateOnly BirthDate,
-		string ImagePath,
+		string? ImagePath,
 		bool IsNotificationOff)
 	{
 	}

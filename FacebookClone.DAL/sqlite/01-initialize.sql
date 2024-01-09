@@ -12,14 +12,14 @@ CREATE TABLE IF NOT EXISTS Profile (
     ImagePath           TEXT,
     IsNotificationOff   INTEGER NOT NULL,
     CONSTRAINT UQ_Profile_Email
-        UNIQUE Profile (Email)
+        UNIQUE (Email)
 );
 
 CREATE TABLE IF NOT EXISTS FriendAccessRight (
     FriendAccessRightId INTEGER PRIMARY KEY,
     Name                TEXT NOT NULL,
     CONSTRAINT UQ_FriendAccessRight_Name
-        UNIQUE Profile (Name)
+        UNIQUE (Name)
 );
 -- People you might want to share less with
 -- Friends who can only see posts and profile info you make public
@@ -84,7 +84,7 @@ CREATE TABLE IF NOT EXISTS Searching (
     SearchedAtUnixSecs  INTEGER NOT NULL,
     Prompt              TEXT NOT NULL,
     CONSTRAINT PK_Searching
-        PRIMARY KEY (ProfileId, SearchAtUnixSecs)
+        PRIMARY KEY (ProfileId, SearchedAtUnixSecs)
 );
 
 CREATE TABLE IF NOT EXISTS FriendInvitation (
@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS FriendInvitation (
 --- GROUP ---
 ---------------
 
-CREATE TABLE IF NOT EXISTS Group (
+CREATE TABLE IF NOT EXISTS ProfileGroup (
     GroupId             INTEGER PRIMARY KEY,
     Name                TEXT NOT NULL,
     MemberCount         INTEGER NOT NULL,
@@ -126,7 +126,7 @@ CREATE TABLE IF NOT EXISTS GroupMember (
     CONSTRAINT PK_GroupMember
         PRIMARY KEY (GroupId, ProfileId),
     CONSTRAINT FK_GroupMember_Group_GroupId
-        FOREIGN KEY (GroupId) REFERENCES Group(GroupId) ON DELETE CASCADE,
+        FOREIGN KEY (GroupId) REFERENCES ProfileGroup(GroupId) ON DELETE CASCADE,
     CONSTRAINT FK_GroupMember_Profile_ProfileId
         FOREIGN KEY (ProfileId) REFERENCES Profile(ProfileId) ON DELETE CASCADE,
     CONSTRAINT FK_GroupMember_GroupMemberRight_GroupMemberRightId
@@ -206,7 +206,7 @@ CREATE TABLE IF NOT EXISTS GroupPost (
     CONSTRAINT PK_GroupPost
         PRIMARY KEY (GroupId, ProfileId, PostId),
     CONSTRAINT FK_GroupPost_Group_GroupId
-        FOREIGN KEY (GroupId) REFERENCES Group(GroupId) ON DELETE CASCADE,
+        FOREIGN KEY (GroupId) REFERENCES ProfileGroup(GroupId) ON DELETE CASCADE,
     CONSTRAINT FK_GroupPost_Profile_ProfileId
         FOREIGN KEY (ProfileId) REFERENCES Profile(ProfileId) ON DELETE CASCADE,
     CONSTRAINT FK_GroupPost_Post_PostId

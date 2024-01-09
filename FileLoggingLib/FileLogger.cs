@@ -1,24 +1,13 @@
-﻿using NLog;
+﻿using Microsoft.Extensions.Logging;
+using NLog;
 using NLog.Config;
 using NLog.Targets;
+using System.Security.AccessControl;
 
 namespace FileLoggingLib
 {
 	public static class FileLogger
 	{
-		public static string? FilePath = null;
-		public static Logger? Logger = null;
-		public static bool IsInitialized { get { return Logger is not null; } }
-
-		public static void Initialize(string filePath)
-		{
-			var config = new LoggingConfiguration();
-			var logFile = new FileTarget(filePath);
-			config.AddRule(LogLevel.Info, LogLevel.Fatal, logFile);
-			LogManager.Configuration = config;
-			
-			Logger = LogManager.GetCurrentClassLogger();
-			FilePath = filePath;
-		}
+		public static Logger Logger { get; private set; } = LogManager.GetCurrentClassLogger();
 	}
 }
