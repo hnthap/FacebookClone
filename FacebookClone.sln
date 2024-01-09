@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookCloneWinForms", "FacebookCloneWinForms\FacebookCloneWinForms.csproj", "{23BC508E-3F67-431A-A09D-9769D8113CDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookCloneWinForms", "FacebookCloneWinForms\FacebookCloneWinForms.csproj", "{23BC508E-3F67-431A-A09D-9769D8113CDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookClone.DTO", "FacebookClone.DTO\FacebookClone.DTO.csproj", "{ECFE8BD5-ABD1-4858-B45D-C983E4D22789}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookClone.DTO", "FacebookClone.DTO\FacebookClone.DTO.csproj", "{ECFE8BD5-ABD1-4858-B45D-C983E4D22789}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookClone.DAL", "FacebookClone.DAL\FacebookClone.DAL.csproj", "{10E8AC25-6FCA-42CA-A844-2E94638857A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookClone.DAL", "FacebookClone.DAL\FacebookClone.DAL.csproj", "{10E8AC25-6FCA-42CA-A844-2E94638857A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacebookClone.BLL", "FacebookClone.BLL\FacebookClone.BLL.csproj", "{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookClone.BLL", "FacebookClone.BLL\FacebookClone.BLL.csproj", "{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileLogger", "FileLogger\FileLogger.csproj", "{C3E018A2-E692-4BB5-8391-E52CA986F6C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3E018A2-E692-4BB5-8391-E52CA986F6C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3E018A2-E692-4BB5-8391-E52CA986F6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3E018A2-E692-4BB5-8391-E52CA986F6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3E018A2-E692-4BB5-8391-E52CA986F6C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 namespace FacebookCloneWinForms
 {
 	internal static class Program

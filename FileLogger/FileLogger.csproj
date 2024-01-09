@@ -10,10 +10,4 @@
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FacebookClone.DAL\FacebookClone.DAL.csproj" />
-    <ProjectReference Include="..\FacebookClone.DTO\FacebookClone.DTO.csproj" />
-    <ProjectReference Include="..\FileLogger\FileLogger.csproj" />
-  </ItemGroup>
-
 </Project>

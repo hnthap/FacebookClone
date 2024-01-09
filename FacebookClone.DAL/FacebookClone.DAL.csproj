@@ -7,7 +7,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="sqlite\00-drop.sql" />
+    <None Remove="sqlite\01-initilize.sql" />
+    <None Remove="sqlite\02-populate.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\FacebookClone.DTO\FacebookClone.DTO.csproj" />
+    <ProjectReference Include="..\FileLogger\FileLogger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="sqlite\00-drop.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="sqlite\01-initilize.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="sqlite\02-populate.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
