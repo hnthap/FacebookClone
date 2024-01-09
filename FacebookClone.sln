@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookClone.DAL", "Facebo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacebookClone.BLL", "FacebookClone.BLL\FacebookClone.BLL.csproj", "{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileLoggingLib", "FileLoggingLib\FileLoggingLib.csproj", "{920F7184-C61A-405D-A56B-306915F76096}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A2FA81A-F74B-4FAA-9A52-29CC69DA36C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{920F7184-C61A-405D-A56B-306915F76096}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{920F7184-C61A-405D-A56B-306915F76096}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{920F7184-C61A-405D-A56B-306915F76096}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{920F7184-C61A-405D-A56B-306915F76096}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

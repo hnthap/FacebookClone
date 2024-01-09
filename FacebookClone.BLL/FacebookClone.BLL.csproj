@@ -8,11 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FacebookClone.DAL\FacebookClone.DAL.csproj" />
     <ProjectReference Include="..\FacebookClone.DTO\FacebookClone.DTO.csproj" />
+    <ProjectReference Include="..\FileLoggingLib\FileLoggingLib.csproj" />
   </ItemGroup>
 
 </Project>

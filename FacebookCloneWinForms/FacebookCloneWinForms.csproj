@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FacebookClone.BLL\FacebookClone.BLL.csproj" />
     <ProjectReference Include="..\FacebookClone.DTO\FacebookClone.DTO.csproj" />
+    <ProjectReference Include="..\FileLoggingLib\FileLoggingLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,6 +35,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.8" />
   </ItemGroup>
 
 </Project>
