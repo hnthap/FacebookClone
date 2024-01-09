@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FacebookClone.DTO\FacebookClone.DTO.csproj" />
-    <ProjectReference Include="..\FileLogger\FileLogger.csproj" />
   </ItemGroup>
 
   <ItemGroup>
